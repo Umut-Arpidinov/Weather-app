@@ -19,10 +19,15 @@ object Versions {
     const val hiltNavFragmentVersion = "1.0.0"
     const val retrofitVersion = "2.9.0"
     const val okHttpVersion = "4.12.0"
+    const val timberVersion = "5.0.1"
     const val lifecycleVersion = "2.6.2"
     const val coroutinesVersion = "1.3.9"
     const val navigationVersion = "2.7.6"
     const val locationVersion = "21.2.0"
+    const val chuckerVersion = "3.5.2"
+    const val glideVersion = "4.16.0"
+
+
 
 }
 
@@ -44,6 +49,7 @@ object Dependencies {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
     const val retofitGsonConverter =
         "com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}"
+    const val chucker = "com.github.chuckerteam.chucker:library:${Versions.chuckerVersion}"
     const val okkHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttpVersion}"
     const val loggingInterceptor =
         "com.squareup.okhttp3:logging-interceptor:${Versions.okHttpVersion}"
@@ -52,6 +58,8 @@ object Dependencies {
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
     const val coroutinesAndroid =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
+
     const val runtimKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleVersion}"
     const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleVersion}"
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}"
@@ -67,4 +75,6 @@ object Dependencies {
         "androidx.navigation:navigation-common-ktx:${Versions.navigationVersion}"
     const val locationService =
         "com.google.android.gms:play-services-location:${Versions.locationVersion}"
+
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
 }

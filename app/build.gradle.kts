@@ -28,6 +28,10 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true 
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -44,11 +48,14 @@ dependencies {
 
     addUiDependencies()
     addAndroidTestsDependencies()
+    addTimberDependency()
     addCoroutinesDependencies()
     addAndroidLifecycleDependencies()
     addLocationDependency()
     addNetworkDependencies()
     addNavigationDependencies()
     addHiltDependencies()
+    addNavigationDependencies()
+    addGlideDependency()
 
 }

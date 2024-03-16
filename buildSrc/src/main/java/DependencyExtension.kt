@@ -19,6 +19,10 @@ fun DependencyHandler.addNetworkDependencies() {
     }
 }
 
+fun DependencyHandler.addTimberDependency() {
+    add("implementation", Dependencies.timber)
+}
+
 fun DependencyHandler.addCoroutinesDependencies() {
     coroutinesDependencies.forEach {
         add("implementation", it)
@@ -50,5 +54,9 @@ fun DependencyHandler.addAndroidTestsDependencies() {
 
 fun DependencyHandler.addLocationDependency() {
     add("implementation", Dependencies.locationService)
+}
+
+fun DependencyHandler.addGlideDependency() {
+    add("implementation", Dependencies.glide)
 }
 

@@ -35,8 +35,11 @@ android {
 }
 
 dependencies {
+    implementation("androidx.databinding:viewbinding:8.3.0")
     addNetworkDependencies()
     addHiltDependencies()
+    addTimberDependency()
+
     addUiDependencies()
 
 }

@@ -13,6 +13,7 @@ internal val networkDependencies = listOf(
     Dependencies.retrofit,
     Dependencies.retofitGsonConverter,
     Dependencies.okkHttp,
+    Dependencies.chucker,
     Dependencies.loggingInterceptor
 )
 

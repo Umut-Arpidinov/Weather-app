@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_unknown_error">Неизвестная ошибка</string>
+    <string name="error_timeout">Извините, плохое интернет - соединение!</string>
+    <string name="error_network_error">Ошибка при подключении</string>
+    <string name="error_gateway_timeout">Время ожидания ответа истекло!</string>
+</resources>

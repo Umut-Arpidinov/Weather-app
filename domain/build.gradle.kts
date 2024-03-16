@@ -40,5 +40,6 @@ dependencies {
     addNetworkDependencies()
     addHiltDependencies()
     addCoroutinesDependencies()
+    addTimberDependency()
 
 }

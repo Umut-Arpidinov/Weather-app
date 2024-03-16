@@ -17,13 +17,20 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://api.openweathermap.org/\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "BASE_URL","\"https://api.openweathermap.org/\"")
         }
+    }
+    buildFeatures {
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -37,7 +44,9 @@ android {
 dependencies {
     api(project(":domain"))
     api(project(":common"))
-    addNetworkDependencies()
     addHiltDependencies()
     addCoroutinesDependencies()
+    addTimberDependency()
+
+    addNetworkDependencies()
 }
