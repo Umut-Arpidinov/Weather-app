@@ -25,7 +25,10 @@ class ErrorConverter @Inject constructor(
             is StringMessageException -> error.msg
             is SocketTimeoutException -> resources.getString(R.string.error_timeout)
             is IOException -> resources.getString(R.string.error_network_error)
-            else -> resources.getString(R.string.error_unknown_error)
+            else -> {
+                resources.getString(R.string.error_unknown_error)
+
+            }
         }
 
     private fun getMessageFrom(exception: HttpException): String {

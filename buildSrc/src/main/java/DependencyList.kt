@@ -26,7 +26,7 @@ object Versions {
     const val locationVersion = "21.2.0"
     const val chuckerVersion = "3.5.2"
     const val glideVersion = "4.16.0"
-
+    const val gmsVersion = "21.2.0"
 
 
 }

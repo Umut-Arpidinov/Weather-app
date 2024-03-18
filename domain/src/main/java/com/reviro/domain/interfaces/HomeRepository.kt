@@ -10,4 +10,16 @@ interface HomeRepository {
         lat: Double,
         long: Double
     ): ApiResult<WeatherForecast>
+
+
+   fun saveLatLng(lat: Double, long: Double)
+
+   fun setFirstLaunch(firstLaunch: Boolean)
+
+   val isFirstLaunch: Boolean
+
+   val latitude: String?
+
+   val longitude: String?
+
 }

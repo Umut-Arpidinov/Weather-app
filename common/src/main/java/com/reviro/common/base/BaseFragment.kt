@@ -57,7 +57,7 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding>(
                     return@observe
                 onError(errorConverter.convert(it.throwable))
                 onError(it.throwable)
-
+                it.throwable.printStackTrace()
             }
         }
     }
