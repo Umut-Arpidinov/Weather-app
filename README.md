@@ -10,17 +10,17 @@ WeatherApp — это мобильное приложение для просм�
 
 
 
-<img src="screens/clear.png" width="200" height="400"> 
+<img src="screens/clear.png" width="200" height="400">   <img src="screens/drop_down.png" width="200" height="400">
 
-<img src="screens/drop_down.png" width="200" height="400">
+
 
 
 
 ### Поиск города
 
-<img src="screens/search.png" width="200" height="400">
+<img src="screens/search.png" width="200" height="400">   <img src="screens/search_location.png" width="200" height="400">
 
-<img src="screens/search_location.png" width="200" height="400">
+
 
 <img src="screens/error_handling.png" width="200" height="400">
 
