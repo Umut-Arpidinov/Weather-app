@@ -6,13 +6,15 @@ WeatherApp — это мобильное приложение для просм�
 
 ### Автоматическое отображение погоды при входе с помошью GPS
 
-<img src="screens/location_gps.png" width="200" height="400">
+<img src="screens/location_gps.png" width="200" height="400"> <img src="screens/loading_state.png" width="200" height="400">
 
-<img src="screens/loading_state.png" width="200" height="400">
 
-<img src="screens/clear.png" width="200" height="400">
+
+<img src="screens/clear.png" width="200" height="400"> 
 
 <img src="screens/drop_down.png" width="200" height="400">
+
+
 
 ### Поиск города
 
