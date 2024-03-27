@@ -114,7 +114,7 @@ class HomeFragment :
         tvTemperature.text = getString(R.string.temperature, weather.current.temp.toString())
         tvWeekDay.text = DataFormatter.getWeekday(weather.current.dt.toLong())
         tvDateYear.text = DataFormatter.getMonthAndYear(weather.current.dt.toLong())
-        tvLocation.text = weather.timezone
+        tvLocation.text = weather.timezone.substringAfter('/')
         tvWeatherTitle.text = weather.current.weather.first().description.uppercase()
         val iconUrl = "${AppConstants.ICON_URL + weather.current.weather.first().icon}.png"
         ivWeatherIcon.loadImage(iconUrl)
