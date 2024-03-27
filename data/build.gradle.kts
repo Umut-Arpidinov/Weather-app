@@ -47,6 +47,6 @@ dependencies {
     addHiltDependencies()
     addCoroutinesDependencies()
     addTimberDependency()
-
+    addRoomDependency()
     addNetworkDependencies()
 }

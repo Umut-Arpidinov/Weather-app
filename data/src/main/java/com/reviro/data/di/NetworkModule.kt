@@ -7,8 +7,9 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.reviro.common.utils.AppConstants
 import com.reviro.data.BuildConfig
+import com.reviro.data.local.prefs.AuthLocaleSource
+import com.reviro.data.remote.SearchCityApiService
 import com.reviro.data.remote.WeatherApiService
-import com.reviro.data.utils.OpenWeatherMapInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,8 +19,14 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Named
+import javax.inject.Qualifier
 import javax.inject.Singleton
+
+@Qualifier
+annotation class WeatherApi
+
+@Qualifier
+annotation class SearchCityApi
 
 
 @Module
@@ -38,17 +45,29 @@ class NetworkModule {
             .build()
 
 
-
     @Provides
-    fun provideRetrofit(
+    @WeatherApi
+    @Singleton
+    fun provideWeatherRetrofit(
         okHttpClient: OkHttpClient,
-        gsonConverterFactory: GsonConverterFactory,
+        gsonConverterFactory: GsonConverterFactory
     ): Retrofit = Retrofit.Builder()
         .addConverterFactory(gsonConverterFactory)
         .baseUrl(BuildConfig.BASE_URL)
         .client(okHttpClient)
         .build()
 
+    @Provides
+    @Singleton
+    @SearchCityApi
+    fun provideLocationSearchRetrofit(
+        okHttpClient: OkHttpClient,
+        gsonConverterFactory: GsonConverterFactory
+    ): Retrofit = Retrofit.Builder()
+        .addConverterFactory(gsonConverterFactory)
+        .baseUrl(AppConstants.SEARCH_BASE_URL)
+        .client(okHttpClient)
+        .build()
 
 
     @Provides
@@ -64,7 +83,6 @@ class NetworkModule {
         .writeTimeout(2, TimeUnit.MINUTES)
         .readTimeout(2, TimeUnit.MINUTES)
         .build()
-
 
 
     @Provides
@@ -91,8 +109,12 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit): WeatherApiService =
+    fun provideWeatherApi(@WeatherApi retrofit: Retrofit): WeatherApiService =
         retrofit.create(WeatherApiService::class.java)
 
+    @Provides
+    @Singleton
+    fun provideSearchApi(@SearchCityApi retrofit: Retrofit): SearchCityApiService =
+        retrofit.create(SearchCityApiService::class.java)
 
 }

@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -30,7 +31,7 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true 
+        viewBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -46,16 +47,18 @@ dependencies {
     api(project(":domain"))
     api(project(":data"))
 
+
     addUiDependencies()
     addAndroidTestsDependencies()
     addTimberDependency()
     addCoroutinesDependencies()
     addAndroidLifecycleDependencies()
+    addRoomDependency()
     addLocationDependency()
     addNetworkDependencies()
     addNavigationDependencies()
     addHiltDependencies()
     addNavigationDependencies()
     addGlideDependency()
-
+    addShimmerDependency()
 }

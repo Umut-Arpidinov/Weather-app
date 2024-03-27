@@ -40,6 +40,8 @@ dependencies {
     addNetworkDependencies()
     addHiltDependencies()
     addCoroutinesDependencies()
+    addRoomDependency()
     addTimberDependency()
+
 
 }

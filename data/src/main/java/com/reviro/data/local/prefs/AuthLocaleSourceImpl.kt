@@ -7,11 +7,13 @@ class AuthLocaleSourceImpl @Inject constructor(
     private val preferences: SharedPreferences
 ) : AuthLocaleSource {
 
-    override var isFirstLaunch: Boolean
-        get() = preferences.getBoolean(IS_FIRST_LAUNCH, true)
-        set(isFirstLaunch) {
-            preferences.edit().putBoolean(IS_FIRST_LAUNCH, isFirstLaunch).apply()
+    override var hasSavedLatLng: Boolean
+        get() = preferences.getBoolean(HAS_SAVED_LOCATION, false)
+        set(hasSavedLatLng) {
+            preferences.edit().putBoolean(HAS_SAVED_LOCATION, hasSavedLatLng).apply()
         }
+
+
     override var latitude: String?
         get() = preferences.getString(LATITUDE, null)
         set(latitude) {
@@ -24,8 +26,11 @@ class AuthLocaleSourceImpl @Inject constructor(
         }
 
 
+
+
+
     companion object {
-        private const val IS_FIRST_LAUNCH = "com.reviro.weather.is_first_launch"
+        private const val HAS_SAVED_LOCATION = "com.reviro.weather.is_first_launch"
         private const val LATITUDE = "com.reviro.weather.latitude"
         private const val LONGITUDE = "com.reviro.weather.longitude"
 

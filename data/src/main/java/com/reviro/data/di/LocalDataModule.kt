@@ -11,9 +11,10 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object SharedPreferenceModule {
+object LocalDataModule {
 
     private const val APP_PREFERENCES = "com.reviro.weather.app_preferences"
+    private const val APP_DB = "reviro.db"
 
 
     @Singleton
@@ -23,6 +24,8 @@ object SharedPreferenceModule {
             APP_PREFERENCES,
             Context.MODE_PRIVATE
         )
+
+
 
 
 }

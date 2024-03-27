@@ -7,4 +7,7 @@
     <color name="transparent">#00ffffff</color>
     <color name="ffc355">#FFC355</color>
     <color name="bright_yellow">#EACA8F</color>
+    <color name="transparent_black_percent">#99000000</color>
+    <color name="shimmer_gray">#D6D8DA</color>
+    <color name="gray">#808080</color>
 </resources>

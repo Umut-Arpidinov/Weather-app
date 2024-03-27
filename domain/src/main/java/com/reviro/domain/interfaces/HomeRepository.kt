@@ -14,9 +14,7 @@ interface HomeRepository {
 
    fun saveLatLng(lat: Double, long: Double)
 
-   fun setFirstLaunch(firstLaunch: Boolean)
-
-   val isFirstLaunch: Boolean
+   val hasSavedLatAndLong: Boolean
 
    val latitude: String?
 

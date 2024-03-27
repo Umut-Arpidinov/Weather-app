@@ -19,6 +19,7 @@ import com.google.android.gms.location.LocationSettingsStatusCodes
 import com.reviro.weather.R
 
 object PermissionUtils {
+
     fun askAccessFineLocationPermission(activity: Activity, requestId: Int) {
         ActivityCompat.requestPermissions(
             activity,

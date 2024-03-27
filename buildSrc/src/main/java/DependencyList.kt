@@ -27,8 +27,8 @@ object Versions {
     const val chuckerVersion = "3.5.2"
     const val glideVersion = "4.16.0"
     const val gmsVersion = "21.2.0"
-
-
+    const val roomVersion = "2.5.2"
+    const val shimmerVersion = "0.5.0"
 }
 
 object Dependencies {
@@ -77,4 +77,14 @@ object Dependencies {
         "com.google.android.gms:play-services-location:${Versions.locationVersion}"
 
     const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
+
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+    const val roomLibrary = "androidx.room:room-ktx:${Versions.roomVersion}"
+    const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
+
+    const val shimmer = "com.facebook.shimmer:shimmer:${Versions.shimmerVersion}"
+
+    const val safeArgs =
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationVersion}"
+
 }

@@ -33,24 +33,13 @@ class ErrorConverter @Inject constructor(
 
     private fun getMessageFrom(exception: HttpException): String {
         return try {
-            if (exception.code() == 504) resources.getString(R.string.error_gateway_timeout)
-            else {
-                val str = exception.response()?.errorBody()?.string()!!
-                val jsonObject = JSONObject(str)
-                val keys = jsonObject.keys()
-                while (keys.hasNext()) {
-                    val key  = keys.next()
-                    val errorMessage = jsonObject.optString(key)
-                    if (errorMessage.isNotEmpty()) {
-                        return errorMessage
-                    }
-                }
-                resources.getString(R.string.error_unknown_error)
-            }
-
+            val str = exception.response()?.errorBody()?.string()!!
+            val jsonObject = JSONObject(str)
+            jsonObject.getString("message")
         } catch (e: Exception) {
             resources.getString(R.string.error_unknown_error)
         }
+
     }
 
 

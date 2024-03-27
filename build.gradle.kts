@@ -6,3 +6,11 @@ plugins {
     id("com.google.dagger.hilt.android") apply false
 }
 
+buildscript {
+    dependencies {
+        addSafeArgs()
+    }
+}
+
+
+

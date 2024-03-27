@@ -10,5 +10,15 @@
         android:name="com.reviro.weather.ui.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"
+        >
+        <action
+            android:id="@+id/action_homeFragment_to_searchLocationFragment"
+            app:destination="@id/searchLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchLocationFragment"
+        android:name="com.reviro.weather.ui.home.SearchLocationFragment"
+        android:label="SearchLocationFragment"
+        tools:layout="@layout/fragment_search_location"
         />
 </navigation>

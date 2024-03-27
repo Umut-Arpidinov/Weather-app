@@ -5,4 +5,10 @@
     <string name="km_per_hour">%1$skm/h</string>
     <string name="_5_day_forecast">5-day forecast</string>
     <string name="_24_hour_forecast">24-hour forecast</string>
+    <string name="_30">30°</string>
+    <string name="image_placeholder">image placeholder</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="city">Город</string>
+    <string name="search_city">Поиск города</string>
+    <string name="add_city">Добавить город</string>
 </resources>

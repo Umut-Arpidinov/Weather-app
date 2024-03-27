@@ -44,6 +44,11 @@ fun DependencyHandler.addNavigationDependencies() {
     }
 }
 
+fun DependencyHandler.addSafeArgs() {
+    add("classpath", Dependencies.safeArgs)
+}
+
+
 fun DependencyHandler.addAndroidTestsDependencies() {
     add("testImplementation", Dependencies.jUnit)
     add("androidTestImplementation", Dependencies.jUnitExt)
@@ -60,3 +65,12 @@ fun DependencyHandler.addGlideDependency() {
     add("implementation", Dependencies.glide)
 }
 
+fun DependencyHandler.addRoomDependency() {
+    add("kapt",Dependencies.roomCompiler)
+    add("implementation", Dependencies.roomLibrary)
+    add("implementation", Dependencies.roomRuntime)
+}
+
+fun DependencyHandler.addShimmerDependency() {
+    add("implementation", Dependencies.shimmer)
+}

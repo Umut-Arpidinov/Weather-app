@@ -1,19 +1,27 @@
 package com.reviro.domain.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Current(
+    @SerializedName("clouds")
     val clouds: Int,
-    val dew_point: Double,
+    @SerializedName("dew_point")
+    val dewPoint: Double,
+    @SerializedName("dt")
     val dt: Int,
-    val feels_like: Double,
-    val humidity: Int,
-    val pressure: Int,
-    val sunrise: Int,
-    val sunset: Int,
+    @SerializedName("feels_like")
+    val feelsLike: Double,
+    @SerializedName("temp")
     val temp: Double,
+    @SerializedName("uvi")
     val uvi: Double,
-    val visibility: Int,
+    @SerializedName("weather")
     val weather: List<Weather>,
-    val wind_deg: Int,
-    val wind_gust: Double,
-    val wind_speed: Double
+    @SerializedName("wind_deg")
+    val windDeg: Int,
+    @SerializedName("wind_gust")
+    val windGust: Double,
+    @SerializedName("wind_speed")
+    val windSpeed: Double,
+    val weatherState: String = "Rain"
 )
